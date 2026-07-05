@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 350233367}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,6 +1026,7 @@ MonoBehaviour:
   zPos: 50
   creatingSegment: 0
   segmentNum: 0
+  coinPool: {fileID: 1797780920}
 --- !u!4 &401819629
 Transform:
   m_ObjectHideFlags: 0
@@ -1649,7 +1650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd89a50150873864d9f2ac20297dd59f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.349
+      value: -0.943
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fd89a50150873864d9f2ac20297dd59f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1737,7 +1738,7 @@ GameObject:
   - component: {fileID: 571735296}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1988,7 +1989,7 @@ GameObject:
   - component: {fileID: 608024293}
   m_Layer: 0
   m_Name: Segment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2668,9 +2669,10 @@ GameObject:
   - component: {fileID: 940631320}
   - component: {fileID: 940631319}
   - component: {fileID: 940631323}
+  - component: {fileID: 940631324}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2764,9 +2766,9 @@ Transform:
   m_GameObject: {fileID: 940631318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 1.91, z: -23}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 330585546}
   - {fileID: 551933266}
@@ -2788,6 +2790,35 @@ MonoBehaviour:
   horizontalSpeed: 5
   rightLimit: 3.5
   leftLimit: -3.5
+  jumpHeight: 6.5
+  isGrounded: 0
+--- !u!54 &940631324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940631318}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1001 &968305374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2864,7 +2895,7 @@ GameObject:
   - component: {fileID: 1017538016}
   m_Layer: 0
   m_Name: Ground01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2973,7 +3004,7 @@ GameObject:
   - component: {fileID: 1081630040}
   m_Layer: 0
   m_Name: Segment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3811,7 +3842,7 @@ GameObject:
   - component: {fileID: 1335662530}
   m_Layer: 0
   m_Name: Segment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3847,7 +3878,7 @@ GameObject:
   - component: {fileID: 1354109665}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4374,7 +4405,7 @@ GameObject:
   - component: {fileID: 1599473830}
   m_Layer: 0
   m_Name: Ground01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4486,7 +4517,7 @@ GameObject:
   - component: {fileID: 1624829584}
   m_Layer: 0
   m_Name: Ground01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4633,7 +4664,7 @@ GameObject:
   - component: {fileID: 1695636189}
   m_Layer: 0
   m_Name: Ground01
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5518,6 +5549,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780315700}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1797780920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6220941230129448040, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+  m_PrefabInstance: {fileID: 338591005527317567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0c27901b41ab24da8ea7ea9122198a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Coin
 --- !u!1 &1849223170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,7 +5602,7 @@ GameObject:
   - component: {fileID: 1856203503}
   m_Layer: 0
   m_Name: StartSegment
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6047,7 +6089,7 @@ GameObject:
   - component: {fileID: 2012737698}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6368,6 +6410,67 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &338591005527317567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6220941230129448040, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 7268060209925798793, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427735401712279735, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268060209925798793, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
+      propertyPath: m_Name
+      value: Coin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c3b4cba1ab9fddb4bb647929f962429e, type: 3}
 --- !u!4 &2129012231011829767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6897832678595782141, guid: 907a355205c65614caed1f686bfad5fc, type: 3}
@@ -6442,3 +6545,4 @@ SceneRoots:
   - {fileID: 1081630040}
   - {fileID: 1335662530}
   - {fileID: 401819629}
+  - {fileID: 338591005527317567}

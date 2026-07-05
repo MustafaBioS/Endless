@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -7,11 +8,15 @@ public class Player : MonoBehaviour
     public float horizontalSpeed = 4f;
     public float rightLimit = 3.5f;
     public float leftLimit = -3.5f;
+    public float jumpHeight = 6.5f;
+    
+    public bool isGrounded;
+    private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,8 +34,22 @@ public class Player : MonoBehaviour
         {
             if (this.gameObject.transform.position.x < rightLimit) 
             {
-                transform.Translate(Vector3.left * Time.deltaTime * horizontalSpeed * -1);
+                transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed);
             }
         }
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) 
+        {
+            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            isGrounded = false;
+        }
     }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }      
 }
