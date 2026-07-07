@@ -128,5 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
   rotateSpeed: 1.5
-  coinPrefab: {fileID: 0}
+  coinSound: {fileID: 0}
+  coinPrefab: {fileID: 7268060209925798793}
   poolSize: 15

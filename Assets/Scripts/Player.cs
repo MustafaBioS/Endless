@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     private Rigidbody rb;
 
+    public static int score = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
