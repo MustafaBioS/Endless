@@ -8,10 +8,12 @@ public class Coin : MonoBehaviour
 
     void Collect()
     {
-        gameObject.SetActive(false);
-        coinSound.Play();
-        Debug.Log("Coin collected");
+        Debug.Log(coinSound.clip);
+        Debug.Log(coinSound.isActiveAndEnabled);
+        StartCoroutine(SoundPlay());
         Player.score += 1;
+        Debug.Log("Coin collected");
+        // gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -32,5 +34,12 @@ public class Coin : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, rotateSpeed, 0, Space.World);
+    }
+ 
+    IEnumerator SoundPlay()
+    {
+        coinSound.Play();
+        yield return new WaitForSeconds(coinSound.clip.length);
+        gameObject.SetActive(false);
     }
 }

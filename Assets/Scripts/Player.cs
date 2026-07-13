@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
                 transform.Translate(Vector3.right * Time.deltaTime * horizontalSpeed);
             }
         }
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) 
+        if (isGrounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))) 
         {
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             isGrounded = false;

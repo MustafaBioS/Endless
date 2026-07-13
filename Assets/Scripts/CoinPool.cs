@@ -25,7 +25,7 @@ public class CoinPool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public GameObject GetCoin(Vector3 position)
