@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class CoinPool : MonoBehaviour
 {
 
-    public int poolSize = 25;
+    public static int coinPoolSize = 25;
 
     public GameObject coinPrefab;
     private List<GameObject> coins;
@@ -14,7 +14,7 @@ public class CoinPool : MonoBehaviour
     {
         coins = new List<GameObject>();
 
-        for (int i = 0; i < poolSize; i++)
+        for (int i = 0; i < coinPoolSize; i++)
         {
             GameObject coin = Instantiate(coinPrefab);
             coin.SetActive(false);

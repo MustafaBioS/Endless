@@ -1209,6 +1209,7 @@ MonoBehaviour:
   creatingSegment: 0
   segmentNum: 0
   coinPool: {fileID: 1217164599}
+  obstaclePool: {fileID: 447710731}
 --- !u!4 &401819629
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,6 +1415,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6897832678595782141, guid: 907a355205c65614caed1f686bfad5fc, type: 3}
   m_PrefabInstance: {fileID: 412583245}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &447710730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.31136
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.89397
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8870095192545679919, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+--- !u!114 &447710731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
+  m_PrefabInstance: {fileID: 447710730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ada320a8e4c414d8b1519994829055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaclePool
 --- !u!1 &458017466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,3 +7041,4 @@ SceneRoots:
   - {fileID: 813714896}
   - {fileID: 1219970380}
   - {fileID: 1217164598}
+  - {fileID: 447710730}
