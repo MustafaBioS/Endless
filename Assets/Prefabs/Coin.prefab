@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2763c9392aae9e14180ae75b9dbfaaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPool
-  poolSize: 25
   coinPrefab: {fileID: 7268060209925798793}
 --- !u!82 &31587425365111411
 AudioSource:

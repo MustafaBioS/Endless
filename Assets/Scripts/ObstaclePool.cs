@@ -8,6 +8,8 @@ public class ObstaclePool : MonoBehaviour
 
     public GameObject obstaclePrefab;
     public GameObject playerAnim;
+    [SerializeField] GameObject fadeOut;
+    [SerializeField] Transform playerTransform;
 
     private List<GameObject> obstacles;
 
@@ -21,6 +23,8 @@ public class ObstaclePool : MonoBehaviour
             GameObject obstacle = Instantiate(obstaclePrefab);
 
             obstacle.GetComponent<Obstacle>().SetPlayerAnim(playerAnim);
+            obstacle.GetComponent<Obstacle>().SetFadeOut(fadeOut);
+            obstacle.GetComponent<Obstacle>().setPlayerTransform(playerTransform);
 
             obstacle.SetActive(false);
             obstacles.Add(obstacle);

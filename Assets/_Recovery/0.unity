@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins: 0'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1409,29 +1409,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3705647820544268269, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: fadeOut
-      value: 
-      objectReference: {fileID: 523499577}
-    - target: {fileID: 3705647820544268269, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 940631322}
-    - target: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: fadeOut
-      value: 
-      objectReference: {fileID: 523499577}
     - target: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: playerAnim
       value: 
       objectReference: {fileID: 368327441}
-    - target: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 940631322}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.31136
+      value: 6.31136
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1439,7 +1423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7
+      value: -12.89397
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3267,7 +3251,7 @@ MonoBehaviour:
   rightLimit: 3.5
   leftLimit: -3.5
   jumpHeight: 6.5
-  playerAnim: {fileID: 368327441}
+  playerAnim: {fileID: 0}
   isGrounded: 0
 --- !u!54 &940631324
 Rigidbody:
@@ -3415,7 +3399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

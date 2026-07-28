@@ -646,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins: 0'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1413,10 +1413,6 @@ PrefabInstance:
       propertyPath: fadeOut
       value: 
       objectReference: {fileID: 523499577}
-    - target: {fileID: 3705647820544268269, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 940631322}
     - target: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: fadeOut
       value: 
@@ -1425,13 +1421,9 @@ PrefabInstance:
       propertyPath: playerAnim
       value: 
       objectReference: {fileID: 368327441}
-    - target: {fileID: 6091503472496721688, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
-      propertyPath: playerTransform
-      value: 
-      objectReference: {fileID: 940631322}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.31136
+      value: 6.31136
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1439,7 +1431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7
+      value: -12.89397
       objectReference: {fileID: 0}
     - target: {fileID: 7247546595883357699, guid: 8bfad84e7ca482348a69670cb6910824, type: 3}
       propertyPath: m_LocalRotation.w

@@ -1,13 +1,34 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
     private GameObject playerAnim;
+    [SerializeField] GameObject fadeOut;
+    [SerializeField] Transform playerTransform;
+
+    public void setPlayerTransform(Transform transform)
+    {
+        playerTransform = transform;
+    }
 
     public void SetPlayerAnim(GameObject animObject)
     {
         playerAnim = animObject;
+    }
+
+    public void SetFadeOut(GameObject fadeOutObject)
+    {
+        fadeOut = fadeOutObject;
+    }
+
+    void Update()
+    {
+        if (transform.position.z < playerTransform.position.z - 20f)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -16,19 +37,19 @@ public class Obstacle : MonoBehaviour
         {
             Player player = other.GetComponent<Player>();
 
-            if (player != null)
-            {
-                Debug.Log("Disabling player movement");
-                player.enabled = false;
-            }
-
-            if (playerAnim != null)
-            {
-                Debug.Log("Playing lose animation");
-                playerAnim.GetComponent<Animator>().Play("Lose");
-            }
-
-            Debug.Log("Obstacle hit");
+            player.enabled = false;
+            playerAnim.GetComponent<Animator>().Play("Lose");
+            StartCoroutine(Restart());
         }
+    }
+
+    IEnumerator Restart()
+    {
+        Player.coins = 0;
+        Player.score = 0;
+        yield return new WaitForSeconds(1f);
+        fadeOut.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

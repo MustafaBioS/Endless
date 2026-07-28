@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Segments : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Segments : MonoBehaviour
     [SerializeField] int zPos = 50;
     [SerializeField] bool creatingSegment = false;
     [SerializeField] int segmentNum;
+
     public CoinPool coinPool;
     public ObstaclePool obstaclePool;
 
@@ -40,6 +42,8 @@ public class Segments : MonoBehaviour
 
         float[] lanes = { -3.5f, 0f, 3.5f };
 
+        List<Vector3> coinPositions = new List<Vector3>();
+
         float z1 = Random.Range(2f, 6f);
         float z2 = Random.Range(2f, 6f);
 
@@ -52,6 +56,7 @@ public class Segments : MonoBehaviour
             Vector3 spawnPos = newSegment.transform.position +
                             new Vector3(x, 1.25f, z1);
 
+            coinPositions.Add(spawnPos);
             coinPool.GetCoin(spawnPos);
 
             z1 += Random.Range(4f, 7f);
@@ -64,9 +69,29 @@ public class Segments : MonoBehaviour
             float x = lanes[Random.Range(0, lanes.Length)];
 
             Vector3 spawnPos = newSegment.transform.position +
-                            new Vector3(x, 1.25f, z2);
+                            new Vector3(x, 2f, z2);
 
-            obstaclePool.GetObstacle(spawnPos);
+            bool closeToCoin = false;
+
+            foreach (Vector3 coinPos in coinPositions)
+            {
+                bool sameLane = 
+                    Mathf.Abs(spawnPos.x - coinPos.x) < 0.1f;
+            
+                bool close = 
+                    Mathf.Abs(spawnPos.z - coinPos.z) < 4f;
+
+                if (sameLane && close)
+                {
+                    closeToCoin = true;
+                    break;
+                }
+            }
+
+            if (!closeToCoin)
+            {
+                obstaclePool.GetObstacle(spawnPos);
+            }
 
             z2 += Random.Range(4f, 7f);
         }
