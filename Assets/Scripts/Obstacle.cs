@@ -44,7 +44,7 @@ public class Obstacle : MonoBehaviour
     }
 
     IEnumerator Restart()
-    {
+    {   
         yield return new WaitForSeconds(1f);
         fadeOut.SetActive(true);
         Player.coins = 0;

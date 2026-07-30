@@ -1,0 +1,20 @@
+# Endless
+Endless is a game made in the Unity Game Engine, it's an endless runner game
+where your goal is to collect coins, avoid obstacles, and keep running.
+
+# why i built it
+I built it to improve my skills in Unity and C# and because it seemed like a fun idea to make!
+
+# how to test
+ Go to `https://mustafabios.itch.io/endless` and try out the game on itch.io!
+
+# keybinds
+> **A -> Move Left**<br>
+> **D -> Move Right**<br>
+> **Space -> Jump**<br>
+
+# inspiration
+Inspired by subway surfers lol
+
+# Theme
+This project follows (as you may have guessed from the name ) the "Endless" theme!
