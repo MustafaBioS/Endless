@@ -45,11 +45,12 @@ public class Obstacle : MonoBehaviour
 
     IEnumerator Restart()
     {
-        Player.coins = 0;
-        Player.score = 0;
         yield return new WaitForSeconds(1f);
         fadeOut.SetActive(true);
+        Player.coins = 0;
+        Player.score = 0;
+        Player.countDown = 3;
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Menu");
     }
 }

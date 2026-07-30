@@ -11,7 +11,7 @@ public class Coin : MonoBehaviour
         Debug.Log(coinSound.clip);
         Debug.Log(coinSound.isActiveAndEnabled);
         StartCoroutine(SoundPlay());
-        Player.score += 1;
+        Player.coins += 1;
         Debug.Log("Coin collected");
         // gameObject.SetActive(false);
     }

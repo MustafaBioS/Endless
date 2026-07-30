@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     public float leftLimit = -3.5f;
     public float jumpHeight = 6.5f;
     [SerializeField] public GameObject playerAnim;
+    
+    // [SerializeField] public GameObject pauseMenu;
+
     public static int countDown = 3;
     
     public bool isGrounded;
@@ -58,6 +61,20 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        // if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        // {
+        //     if (pauseMenu.activeSelf)
+        //     {
+        //         pauseMenu.SetActive(false);
+        //         // Time.timeScale = 1f;
+        //     }
+        //     else
+        //     {
+        //         pauseMenu.SetActive(true);
+        //         // Time.timeScale = 0f;
+        //     }
+        // }
     }
 
 
