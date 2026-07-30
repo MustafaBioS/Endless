@@ -6,7 +6,9 @@ where your goal is to collect coins, avoid obstacles, and keep running.
 I built it to improve my skills in Unity and C# and because it seemed like a fun idea to make!
 
 # how to test
- Go to `https://mustafabios.itch.io/endless` and try out the game on itch.io!
+ Go to `https://mustafabios.itch.io/endless` and try out the game on itch.io!<br>
+ **IMPORTANT**<br>
+ I'm aware that the settings button in the main menu currently doesn't work and that the screen on itch.io is a bit weird, all of those are W.I.P
 
 # keybinds
 > **A -> Move Left**<br>
