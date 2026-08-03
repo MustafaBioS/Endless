@@ -22,4 +22,4 @@ I'm aware of the screen size being a bit off but i submitted this a little befor
 Inspired by subway surfers lol
 
 # Theme
-This project follows (as you may have guessed from the name ) the "Endless" theme!
+This project follows (as you may have guessed from the name ) the "Endless" theme! (as it is an endless runner game)
